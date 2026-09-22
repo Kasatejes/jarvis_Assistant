@@ -29,7 +29,7 @@ app.use(express.json({ limit: '25mb' }));
 app.use(express.urlencoded({ extended: true, limit: '25mb' }));
 
 // Initialize Groq / AI API Client with environment fallback
-const GROQ_API_KEY = process.env.GROQ_API_KEY || process.env.ASTRA_API_KEY || process.env.OPENAI_API_KEY || '';
+const GROQ_API_KEY = process.env.GROQ_API_KEY || process.env.OPENAI_API_KEY || '';
 const groq = new Groq({ apiKey: GROQ_API_KEY });
 
 // In-memory history of opened websites

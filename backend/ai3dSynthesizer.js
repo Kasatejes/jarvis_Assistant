@@ -14,7 +14,7 @@ try {
 }
 
 // Initialize Groq client
-const GROQ_API_KEY = process.env.GROQ_API_KEY || process.env.ASTRA_API_KEY || process.env.OPENAI_API_KEY || '';
+const GROQ_API_KEY = process.env.GROQ_API_KEY || process.env.OPENAI_API_KEY || '';
 const groq = new Groq({ apiKey: GROQ_API_KEY });
 
 /**
