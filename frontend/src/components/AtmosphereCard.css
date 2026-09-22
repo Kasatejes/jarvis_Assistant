@@ -1,0 +1,345 @@
+.atmosphere-hud-card {
+  position: fixed;
+  left: 28px;
+  top: calc(50% + 115px);
+  transform: translateY(-50%);
+  width: 290px;
+  height: 285px;
+  z-index: 998;
+  pointer-events: auto;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.atmosphere-hud-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 9px 12px;
+  font-family: 'Orbitron', monospace;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+/* Centered Header with Expand Trigger */
+.atmosphere-hud-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  color: #00f0ff;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.atmosphere-hud-header:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.9);
+}
+
+.atmo-header-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.atmo-header-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 230px;
+  letter-spacing: 0.8px;
+}
+
+.atmo-header-dot {
+  font-size: 7px;
+  color: rgba(0, 240, 255, 0.6);
+  text-shadow: 0 0 6px #00f0ff;
+}
+
+.widget-expand-btn {
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  color: #00f0ff;
+  font-size: 11px;
+  width: 19px;
+  height: 19px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.widget-expand-btn:hover {
+  background: rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+  color: #ffffff;
+  transform: scale(1.12);
+}
+
+/* Hero Weather Row (Cloud on Left, Current Temp on Right) */
+.atmo-hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.08) 0%, rgba(5, 20, 35, 0.6) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.22);
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 1px 0;
+  box-shadow: inset 0 0 12px rgba(0, 240, 255, 0.06);
+}
+
+.atmo-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.atmo-cloud-symbol-box {
+  width: 36px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  animation: atmoCloudFloat 3s ease-in-out infinite;
+}
+
+@keyframes atmoCloudFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.atmo-cloud-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.atmo-rain-streaks {
+  animation: atmoRainPulse 1.5s linear infinite;
+}
+
+@keyframes atmoRainPulse {
+  0%, 100% {
+    opacity: 0.9;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    opacity: 0.4;
+    stroke-dashoffset: 2;
+  }
+}
+
+.atmo-condition-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.atmo-condition-name {
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #00f0ff;
+  text-shadow: 0 0 6px rgba(0, 240, 255, 0.5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 110px;
+}
+
+.atmo-condition-badge {
+  font-size: 5.5px;
+  font-weight: 700;
+  color: #00ffaa;
+  letter-spacing: 0.7px;
+  background: rgba(0, 255, 170, 0.1);
+  border: 1px solid rgba(0, 255, 170, 0.35);
+  border-radius: 3px;
+  padding: 1px 4px;
+  width: fit-content;
+  text-shadow: 0 0 4px rgba(0, 255, 170, 0.5);
+}
+
+.atmo-hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.atmo-temp-display {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  line-height: 1;
+}
+
+.atmo-temp-num {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 255, 170, 0.8), 0 0 18px rgba(0, 240, 255, 0.4);
+}
+
+.atmo-temp-unit {
+  font-size: 11px;
+  font-weight: 700;
+  color: #00ffaa;
+  text-shadow: 0 0 6px rgba(0, 255, 170, 0.6);
+}
+
+.atmo-temp-label {
+  font-size: 5.5px;
+  font-weight: 600;
+  color: rgba(0, 240, 255, 0.75);
+  letter-spacing: 0.8px;
+  margin-top: 2px;
+}
+
+/* 3 Metric Columns */
+.atmo-tri-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  text-align: center;
+  background: rgba(0, 240, 255, 0.03);
+  border: 1px dashed rgba(0, 240, 255, 0.18);
+  border-radius: 5px;
+  padding: 5px 3px;
+  margin: 1px 0;
+}
+
+.atmo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  transition: transform 0.2s ease;
+}
+
+.atmo-col:hover {
+  transform: translateY(-1px);
+}
+
+.atmo-col-label {
+  font-size: 6.5px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.6px;
+}
+
+.atmo-col-icon {
+  font-size: 11px;
+  margin: 1px 0;
+  filter: drop-shadow(0 0 3px rgba(0, 240, 255, 0.4));
+}
+
+.atmo-col-val {
+  font-size: 9px;
+  font-weight: 700;
+  color: #00ffaa;
+  text-shadow: 0 0 4px rgba(0, 255, 170, 0.4);
+}
+
+.atmo-col-sub {
+  font-size: 6px;
+  color: rgba(0, 240, 255, 0.65);
+  letter-spacing: 0.5px;
+}
+
+/* 7-Day Chart Section */
+.atmo-chart-section {
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 15, 30, 0.6);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  border-radius: 5px;
+  padding: 4px 6px;
+  gap: 2px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7px;
+  letter-spacing: 0.8px;
+}
+
+.chart-header-title {
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 600;
+}
+
+.chart-header-status {
+  color: rgba(0, 240, 255, 0.75);
+  font-size: 6px;
+  letter-spacing: 0.5px;
+}
+
+.svg-chart-wrapper {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp-sparkline-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chart-days-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 2px;
+}
+
+.chart-day-label {
+  font-size: 6.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1200px) {
+  .atmosphere-hud-card {
+    left: 15px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .atmosphere-hud-card {
+    display: none;
+  }
+}
+

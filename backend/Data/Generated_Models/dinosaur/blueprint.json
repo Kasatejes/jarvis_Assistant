@@ -1,0 +1,339 @@
+{
+  "modelName": "Apex Predator T-Rex Dinosaur",
+  "category": "creature",
+  "parts": [
+    {
+      "name": "skull_cranium",
+      "shape": "box",
+      "dimensions": [0.72, 0.65, 0.82],
+      "position": [0, 2.35, 1.45],
+      "rotation": [-0.15, 0, 0],
+      "color": "#284410",
+      "material": "matte"
+    },
+    {
+      "name": "brow_ridge_left",
+      "shape": "box",
+      "dimensions": [0.18, 0.16, 0.55],
+      "position": [-0.32, 2.55, 1.52],
+      "rotation": [-0.15, -0.15, 0.2],
+      "color": "#1e300d",
+      "material": "stone"
+    },
+    {
+      "name": "brow_ridge_right",
+      "shape": "box",
+      "dimensions": [0.18, 0.16, 0.55],
+      "position": [0.32, 2.55, 1.52],
+      "rotation": [-0.15, 0.15, -0.2],
+      "color": "#1e300d",
+      "material": "stone"
+    },
+    {
+      "name": "snout_upper_jaw",
+      "shape": "box",
+      "dimensions": [0.55, 0.48, 1.15],
+      "position": [0, 2.22, 2.1],
+      "rotation": [-0.08, 0, 0],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "snout_tip_nostrils",
+      "shape": "box",
+      "dimensions": [0.46, 0.38, 0.38],
+      "position": [0, 2.14, 2.75],
+      "rotation": [0.1, 0, 0],
+      "color": "#284410",
+      "material": "matte"
+    },
+    {
+      "name": "left_eye",
+      "shape": "sphere",
+      "dimensions": [0.09, 12, 12],
+      "position": [-0.36, 2.45, 1.62],
+      "rotation": [0, 0, 0],
+      "color": "#f59e0b",
+      "material": "glow"
+    },
+    {
+      "name": "right_eye",
+      "shape": "sphere",
+      "dimensions": [0.09, 12, 12],
+      "position": [0.36, 2.45, 1.62],
+      "rotation": [0, 0, 0],
+      "color": "#f59e0b",
+      "material": "glow"
+    },
+    {
+      "name": "lower_jaw",
+      "shape": "box",
+      "dimensions": [0.48, 0.22, 1.15],
+      "position": [0, 1.86, 2.05],
+      "rotation": [0.22, 0, 0],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "mouth_throat",
+      "shape": "box",
+      "dimensions": [0.38, 0.16, 0.85],
+      "position": [0, 2.02, 1.88],
+      "rotation": [0.05, 0, 0],
+      "color": "#be123c",
+      "material": "matte"
+    },
+    {
+      "name": "upper_teeth_left",
+      "shape": "cone",
+      "dimensions": [0.05, 0.18, 6],
+      "position": [-0.24, 1.96, 2.25],
+      "rotation": [Math.PI, 0, 0],
+      "color": "#f8fafc",
+      "material": "stone"
+    },
+    {
+      "name": "upper_teeth_right",
+      "shape": "cone",
+      "dimensions": [0.05, 0.18, 6],
+      "position": [0.24, 1.96, 2.25],
+      "rotation": [Math.PI, 0, 0],
+      "color": "#f8fafc",
+      "material": "stone"
+    },
+    {
+      "name": "upper_teeth_front",
+      "shape": "box",
+      "dimensions": [0.35, 0.08, 0.08],
+      "position": [0, 1.95, 2.7],
+      "rotation": [0, 0, 0],
+      "color": "#f8fafc",
+      "material": "stone"
+    },
+    {
+      "name": "lower_teeth_front",
+      "shape": "box",
+      "dimensions": [0.32, 0.08, 0.08],
+      "position": [0, 2.02, 2.58],
+      "rotation": [0, 0, 0],
+      "color": "#f8fafc",
+      "material": "stone"
+    },
+    {
+      "name": "neck_upper",
+      "shape": "cylinder",
+      "dimensions": [0.38, 0.48, 0.9, 16],
+      "position": [0, 2.02, 1.05],
+      "rotation": [-0.45, 0, 0],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "neck_lower",
+      "shape": "cylinder",
+      "dimensions": [0.46, 0.58, 0.8, 16],
+      "position": [0, 1.65, 0.65],
+      "rotation": [-0.3, 0, 0],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "massive_chest",
+      "shape": "capsule",
+      "dimensions": [0.65, 1.2],
+      "position": [0, 1.45, 0],
+      "rotation": [1.45, 0, 0],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "pale_underbelly",
+      "shape": "box",
+      "dimensions": [0.85, 0.38, 1.55],
+      "position": [0, 1.02, 0],
+      "rotation": [0, 0, 0],
+      "color": "#d4a373",
+      "material": "matte"
+    },
+    {
+      "name": "dorsal_spine_ridges",
+      "shape": "box",
+      "dimensions": [0.12, 0.22, 1.6],
+      "position": [0, 2.12, 0],
+      "rotation": [0, 0, 0],
+      "color": "#1e300d",
+      "material": "stone"
+    },
+    {
+      "name": "left_thigh",
+      "shape": "capsule",
+      "dimensions": [0.35, 0.85],
+      "position": [-0.72, 1.25, -0.1],
+      "rotation": [0.38, 0, 0],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "right_thigh",
+      "shape": "capsule",
+      "dimensions": [0.35, 0.85],
+      "position": [0.72, 1.25, -0.1],
+      "rotation": [0.38, 0, 0],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "left_shin",
+      "shape": "cylinder",
+      "dimensions": [0.18, 0.15, 0.9, 14],
+      "position": [-0.72, 0.65, 0.15],
+      "rotation": [-0.42, 0, 0],
+      "color": "#284410",
+      "material": "matte"
+    },
+    {
+      "name": "right_shin",
+      "shape": "cylinder",
+      "dimensions": [0.18, 0.15, 0.9, 14],
+      "position": [0.72, 0.65, 0.15],
+      "rotation": [-0.42, 0, 0],
+      "color": "#284410",
+      "material": "matte"
+    },
+    {
+      "name": "left_ankle_hock",
+      "shape": "cylinder",
+      "dimensions": [0.14, 0.14, 0.65, 12],
+      "position": [-0.72, 0.3, -0.06],
+      "rotation": [0.22, 0, 0],
+      "color": "#284410",
+      "material": "matte"
+    },
+    {
+      "name": "right_ankle_hock",
+      "shape": "cylinder",
+      "dimensions": [0.14, 0.14, 0.65, 12],
+      "position": [0.72, 0.3, -0.06],
+      "rotation": [0.22, 0, 0],
+      "color": "#284410",
+      "material": "matte"
+    },
+    {
+      "name": "left_foot_talons",
+      "shape": "box",
+      "dimensions": [0.46, 0.12, 0.62],
+      "position": [-0.72, 0.06, 0.2],
+      "rotation": [0, 0, 0],
+      "color": "#1e300d",
+      "material": "stone"
+    },
+    {
+      "name": "right_foot_talons",
+      "shape": "box",
+      "dimensions": [0.46, 0.12, 0.62],
+      "position": [0.72, 0.06, 0.2],
+      "rotation": [0, 0, 0],
+      "color": "#1e300d",
+      "material": "stone"
+    },
+    {
+      "name": "left_claws",
+      "shape": "cone",
+      "dimensions": [0.06, 0.22, 6],
+      "position": [-0.72, 0.06, 0.58],
+      "rotation": [Math.PI / 2, 0, 0],
+      "color": "#f8fafc",
+      "material": "stone"
+    },
+    {
+      "name": "right_claws",
+      "shape": "cone",
+      "dimensions": [0.06, 0.22, 6],
+      "position": [0.72, 0.06, 0.58],
+      "rotation": [Math.PI / 2, 0, 0],
+      "color": "#f8fafc",
+      "material": "stone"
+    },
+    {
+      "name": "left_arm",
+      "shape": "cylinder",
+      "dimensions": [0.09, 0.08, 0.42, 10],
+      "position": [-0.58, 1.38, 0.68],
+      "rotation": [0.52, 0, -0.22],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "right_arm",
+      "shape": "cylinder",
+      "dimensions": [0.09, 0.08, 0.42, 10],
+      "position": [0.58, 1.38, 0.68],
+      "rotation": [0.52, 0, 0.22],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "left_claw_hand",
+      "shape": "cone",
+      "dimensions": [0.05, 0.16, 6],
+      "position": [-0.62, 1.15, 0.9],
+      "rotation": [Math.PI / 3, 0, 0],
+      "color": "#f8fafc",
+      "material": "stone"
+    },
+    {
+      "name": "right_claw_hand",
+      "shape": "cone",
+      "dimensions": [0.05, 0.16, 6],
+      "position": [0.62, 1.15, 0.9],
+      "rotation": [Math.PI / 3, 0, 0],
+      "color": "#f8fafc",
+      "material": "stone"
+    },
+    {
+      "name": "tail_base",
+      "shape": "cylinder",
+      "dimensions": [0.55, 0.46, 1.25, 16],
+      "position": [0, 1.42, -1.15],
+      "rotation": [1.46, 0, 0],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "tail_mid",
+      "shape": "cylinder",
+      "dimensions": [0.44, 0.32, 1.35, 14],
+      "position": [0, 1.38, -2.35],
+      "rotation": [1.54, 0, 0],
+      "color": "#365314",
+      "material": "matte"
+    },
+    {
+      "name": "tail_extension",
+      "shape": "cylinder",
+      "dimensions": [0.3, 0.18, 1.45, 12],
+      "position": [0, 1.46, -3.65],
+      "rotation": [1.62, 0, 0],
+      "color": "#284410",
+      "material": "matte"
+    },
+    {
+      "name": "tail_tip",
+      "shape": "cone",
+      "dimensions": [0.18, 1.1, 12],
+      "position": [0, 1.62, -4.8],
+      "rotation": [-1.48, 0, 0],
+      "color": "#284410",
+      "material": "matte"
+    },
+    {
+      "name": "tail_dorsal_spikes",
+      "shape": "box",
+      "dimensions": [0.08, 0.18, 3.2],
+      "position": [0, 1.65, -2.6],
+      "rotation": [0.05, 0, 0],
+      "color": "#1e300d",
+      "material": "stone"
+    }
+  ]
+}

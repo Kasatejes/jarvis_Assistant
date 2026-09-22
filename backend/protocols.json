@@ -1,0 +1,50 @@
+[
+  {
+    "id": "focus",
+    "name": "Protocol Focus",
+    "icon": "🎯",
+    "description": "Developer immersion mode: launches VS Code, terminal, silences distractions, and starts deep work timer.",
+    "voiceConfirmation": "Protocol Focus initiated, sir. Developer environment deployed, distractions cleared, and audio attenuated.",
+    "actions": [
+      { "type": "open", "targets": ["vscode", "terminal"] },
+      { "type": "close", "targets": ["youtube", "instagram", "spotify", "netflix"] },
+      { "type": "volume", "action": "set", "level": 20 },
+      { "type": "timer", "seconds": 2700, "label": "Deep Work Sprint (45m)" }
+    ]
+  },
+  {
+    "id": "chill",
+    "name": "Protocol Chill",
+    "icon": "🎵",
+    "description": "Recreation & entertainment mode: opens Spotify, YouTube, and dials up audio.",
+    "voiceConfirmation": "Protocol Chill engaged, sir. Media systems online and volume dialed up.",
+    "actions": [
+      { "type": "open", "targets": ["spotify", "youtube"] },
+      { "type": "volume", "action": "set", "level": 65 },
+      { "type": "media", "action": "playpause" }
+    ]
+  },
+  {
+    "id": "clean_slate",
+    "name": "Protocol Clean Slate",
+    "icon": "🧹",
+    "description": "Closes entertainment apps and browser tabs, cleans up workspace.",
+    "voiceConfirmation": "Protocol Clean Slate in progress. Clearing workspace distractions.",
+    "actions": [
+      { "type": "close", "targets": ["youtube", "instagram", "spotify", "discord", "steam", "netflix"] },
+      { "type": "volume", "action": "set", "level": 35 }
+    ]
+  },
+  {
+    "id": "nightfall",
+    "name": "Protocol Nightfall",
+    "icon": "🌙",
+    "description": "End-of-day sequence: mutes master audio, closes running media, and secures workstation.",
+    "voiceConfirmation": "Initiating Protocol Nightfall, sir. Silencing audio and securing workstation.",
+    "actions": [
+      { "type": "volume", "action": "mute" },
+      { "type": "close", "targets": ["spotify", "youtube", "discord", "instagram", "netflix"] },
+      { "type": "power", "action": "lock" }
+    ]
+  }
+]

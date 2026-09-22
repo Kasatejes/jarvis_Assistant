@@ -1,0 +1,80 @@
+.hud-card__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hud-card__background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.hud-card__grid {
+  display: grid;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.hud-card__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(8, 14, 26, 0.88) 0%, rgba(4, 9, 20, 0.95) 100%);
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 
+    0 16px 40px rgba(0, 0, 0, 0.7),
+    0 0 25px rgba(0, 240, 255, 0.14),
+    inset 0 1px 1px rgba(0, 240, 255, 0.25);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+@keyframes hud-glow {
+  0%, 100% {
+    stroke-width: 2px;
+    opacity: 0.4;
+  }
+  50% {
+    stroke-width: 3.5px;
+    opacity: 0.8;
+  }
+}
+
+.svg {
+  overflow: visible;
+}
+
+.svg__stroke {
+  fill: none;
+  stroke-miterlimit: 10;
+}
+
+.svg__stroke--glow {
+  stroke-width: 2.5px;
+  animation: hud-glow 3s infinite ease-in-out;
+  stroke: rgba(0, 240, 255, 0.35);
+}
+
+.svg__stroke--bottom {
+  stroke-width: 1.2px;
+  stroke: rgba(0, 240, 255, 0.8);
+}
+
+.svg__stroke--top {
+  stroke-width: 0.6px;
+  stroke: rgba(220, 250, 255, 0.95);
+}
+

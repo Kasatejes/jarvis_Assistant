@@ -1,0 +1,179 @@
+/* =========================================================
+   IRON MAN PROTOCOLS PANEL
+   ========================================================= */
+
+.protocols-panel-container {
+  position: relative;
+  background: linear-gradient(135deg, rgba(8, 16, 32, 0.85) 0%, rgba(4, 8, 18, 0.95) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: #ffffff;
+  font-family: 'Orbitron', 'Rajdhani', sans-serif;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(0, 240, 255, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.protocols-panel-container:hover {
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 
+    0 12px 36px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.protocols-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+  padding-bottom: 8px;
+}
+
+.protocols-panel-title {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #00f0ff;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.protocols-status-badge {
+  font-size: 9px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: rgba(0, 255, 170, 0.1);
+  border: 1px solid rgba(0, 255, 170, 0.3);
+  color: #00ffaa;
+  letter-spacing: 1px;
+}
+
+/* Protocols Grid */
+.protocols-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.protocol-card {
+  background: rgba(10, 20, 38, 0.6);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.protocol-card:hover {
+  border-color: rgba(0, 240, 255, 0.45);
+  background: rgba(14, 28, 52, 0.75);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 240, 255, 0.15);
+}
+
+.protocol-card.active-executing {
+  border-color: #00ffaa;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
+}
+
+.protocol-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.protocol-icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.protocol-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.protocol-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.protocol-desc {
+  font-size: 10px;
+  color: #94a3b8;
+  line-height: 1.3;
+}
+
+/* Action Chips Inside Card */
+.protocol-actions-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.protocol-action-pill {
+  font-size: 8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #00f0ff;
+  letter-spacing: 0.5px;
+}
+
+/* Activate Button */
+.protocol-activate-btn {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.15) 0%, rgba(214, 0, 255, 0.15) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  color: #00f0ff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.protocol-activate-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.3) 0%, rgba(214, 0, 255, 0.3) 100%);
+  border-color: #00f0ff;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+  transform: scale(1.02);
+}
+
+.protocol-activate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

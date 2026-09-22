@@ -1,0 +1,302 @@
+.tactical-chrono-panel {
+  position: fixed;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 260px;
+  height: 310px;
+  z-index: 998;
+  pointer-events: auto;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.chrono-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 14px 16px;
+  font-family: 'Orbitron', monospace;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+/* Header */
+.chrono-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.chrono-header-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #00f0ff;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+
+.chrono-ping-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00ffaa;
+  box-shadow: 0 0 8px #00ffaa;
+  animation: chrono-pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes chrono-pulse {
+  0% { opacity: 0.3; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.3; transform: scale(0.85); }
+}
+
+/* Main Clock Display */
+.chrono-clock-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.clock-digits-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.clock-main {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.7), 0 0 24px rgba(0, 240, 255, 0.3);
+}
+
+.clock-millis {
+  font-size: 13px;
+  color: #00f0ff;
+  font-weight: 600;
+  width: 32px;
+  text-align: left;
+  margin-left: 3px;
+  opacity: 0.85;
+}
+
+.clock-sub-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 4px;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+}
+
+.chrono-tag {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.chrono-stardate {
+  color: #ffaa00;
+  text-shadow: 0 0 6px rgba(255, 170, 0, 0.4);
+  font-weight: 600;
+}
+
+/* Telemetry Strip */
+.chrono-telemetry-strip {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 240, 255, 0.04);
+  border: 1px dashed rgba(0, 240, 255, 0.15);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 9px;
+}
+
+.telemetry-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.telemetry-label {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+.telemetry-val {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.val-cyan {
+  color: #00f0ff;
+  text-shadow: 0 0 6px rgba(0, 240, 255, 0.4);
+}
+
+/* Divider */
+.chrono-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.3), transparent);
+  margin: 3px 0;
+}
+
+/* Atmosphere & Weather Section */
+.atmosphere-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.atmosphere-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.atmosphere-title {
+  font-size: 9px;
+  font-weight: 700;
+  color: rgba(0, 240, 255, 0.85);
+  letter-spacing: 1px;
+}
+
+.unit-toggle-btn {
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: #00f0ff;
+  font-family: 'Orbitron', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.unit-toggle-btn:hover {
+  background: rgba(0, 240, 255, 0.25);
+  box-shadow: 0 0 6px rgba(0, 240, 255, 0.4);
+}
+
+.atmosphere-main-grid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.temp-badge {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.temp-number {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+
+.temp-unit {
+  font-size: 10px;
+  color: #00f0ff;
+  font-weight: 700;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+.atmosphere-status {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.condition-highlight {
+  font-size: 9px;
+  font-weight: 700;
+  color: #00ffaa;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 6px rgba(0, 255, 170, 0.4);
+}
+
+.condition-sub {
+  font-size: 7.5px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.4px;
+}
+
+/* Micro atmospheric stats */
+.atmosphere-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.atmo-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 8px;
+}
+
+.atmo-stat-label {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.atmo-stat-val {
+  color: #00f0ff;
+  font-weight: 600;
+}
+
+/* Coordinates Footer */
+.chrono-coords-footer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 7.5px;
+  color: rgba(0, 240, 255, 0.7);
+  letter-spacing: 0.5px;
+  padding-top: 4px;
+  border-top: 1px solid rgba(0, 240, 255, 0.1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.coords-icon {
+  font-size: 11px;
+  color: #ffaa00;
+}
+
+.coords-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .tactical-chrono-panel {
+    left: 15px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .tactical-chrono-panel {
+    display: none;
+  }
+}

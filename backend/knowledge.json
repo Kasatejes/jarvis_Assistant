@@ -1,0 +1,25 @@
+[
+  {
+    "id": "kb_agi_001",
+    "topic": "AGI (Artificial General Intelligence)",
+    "keywords": [
+      "agi",
+      "artificial general intelligence",
+      "general intelligence",
+      "superintelligence",
+      "singularity"
+    ],
+    "content": "Artificial General Intelligence (AGI) is the representation of generalized human cognitive abilities in software such that, faced with an unfamiliar task, the AGI system could find a solution. In our J.A.R.V.I.S. architecture, AGI is conceived as an autonomous cognitive framework with multimodal perception, real-time tool orchestration, persistent memory, and continuous adaptive learning capabilities beyond narrow AI models.",
+    "updatedAt": "2026-09-17T12:00:00.000Z"
+  },
+  {
+    "id": "kb_1789816430254_1x4e4",
+    "topic": "User Note",
+    "keywords": [
+      "user",
+      "note"
+    ],
+    "content": "Created 3",
+    "updatedAt": "2026-09-19T11:13:50.254Z"
+  }
+]

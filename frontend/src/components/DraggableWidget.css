@@ -1,0 +1,133 @@
+/* =========================================================
+   HOLOGRAPHIC DRAGGABLE WIDGET WRAPPER
+   ========================================================= */
+
+.draggable-widget-wrapper {
+  position: relative !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, box-shadow 0.2s ease;
+  width: 100% !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  cursor: grab;
+}
+
+.draggable-widget-wrapper:active {
+  cursor: grabbing;
+}
+
+/* Dragging State */
+.draggable-widget-wrapper.is-dragging {
+  opacity: 0.35;
+  transform: scale(0.98);
+  border-radius: 14px;
+  outline: 2px dashed #00f0ff;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.45);
+}
+
+/* Floating ✕ Delete Button — hidden until widget is hovered */
+.draggable-widget-delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 200;
+  background: rgba(20, 8, 14, 0.85);
+  border: 1px solid rgba(255, 42, 109, 0.5);
+  color: #ff5e88;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  padding: 0;
+  line-height: 1;
+  backdrop-filter: blur(6px);
+}
+
+.draggable-widget-wrapper:hover .draggable-widget-delete-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.draggable-widget-delete-btn:hover {
+  background: rgba(255, 42, 109, 0.9);
+  border-color: #ff2a6d;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 42, 109, 0.8);
+  transform: scale(1.1);
+}
+
+.draggable-widget-delete-btn:active {
+  transform: scale(0.95);
+}
+
+/* Widget Interactive Body */
+.draggable-widget-body {
+  width: 100%;
+  position: relative;
+  pointer-events: auto;
+}
+
+/* Drop Target Indicators */
+.draggable-widget-wrapper.drop-target-before::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00f0ff, #00ffaa, transparent);
+  border-radius: 2px;
+  box-shadow: 0 0 12px #00f0ff, 0 0 20px #00ffaa;
+  z-index: 100;
+  animation: pulseDropLine 1s infinite alternate;
+}
+
+.draggable-widget-wrapper.drop-target-after::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00f0ff, #00ffaa, transparent);
+  border-radius: 2px;
+  box-shadow: 0 0 12px #00f0ff, 0 0 20px #00ffaa;
+  z-index: 100;
+  animation: pulseDropLine 1s infinite alternate;
+}
+
+@keyframes pulseDropLine {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* Empty Drop Zone */
+.empty-drop-zone {
+  min-height: 110px;
+  border: 1px dashed rgba(0, 240, 255, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 240, 255, 0.6);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  background: rgba(0, 240, 255, 0.02);
+  transition: all 0.2s ease;
+}
+
+.empty-drop-zone.drag-over {
+  background: rgba(0, 240, 255, 0.1);
+  border-color: #00ffaa;
+  box-shadow: inset 0 0 15px rgba(0, 255, 170, 0.3);
+  color: #00ffaa;
+}

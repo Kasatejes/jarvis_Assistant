@@ -1,0 +1,199 @@
+/* =========================================================
+   HARDWARE HEALTH & BATTERY DIAGNOSTICS CARD
+   ========================================================= */
+
+.hardware-card-container {
+  position: relative;
+  background: linear-gradient(135deg, rgba(8, 16, 32, 0.85) 0%, rgba(4, 8, 18, 0.95) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: #ffffff;
+  font-family: 'Orbitron', 'Rajdhani', sans-serif;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(0, 240, 255, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hardware-card-container:hover {
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 
+    0 12px 36px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.hardware-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+  padding-bottom: 8px;
+}
+
+.hardware-card-title {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #00f0ff;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hardware-refresh-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: #00f0ff;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.hardware-refresh-btn:hover {
+  background: rgba(0, 240, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+/* Dual Column Metrics Row */
+.hardware-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.hardware-stat-box {
+  background: rgba(0, 240, 255, 0.04);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hardware-icon-bubble {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.hardware-stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hardware-stat-label {
+  font-size: 9px;
+  color: #94a3b8;
+  letter-spacing: 1.5px;
+}
+
+.hardware-stat-val {
+  font-size: 16px;
+  font-weight: 800;
+  color: #00ffaa;
+  text-shadow: 0 0 10px rgba(0, 255, 170, 0.4);
+}
+
+.hardware-stat-sub {
+  font-size: 8.5px;
+  color: #00f0ff;
+  letter-spacing: 1px;
+}
+
+/* Drive Storage Section */
+.hardware-drives-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 12px;
+}
+
+.hardware-drive-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hardware-drive-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.hardware-drive-name {
+  color: #ffffff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hardware-drive-size {
+  color: #94a3b8;
+}
+
+.hardware-progress-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hardware-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00f0ff 0%, #00ffaa 100%);
+  border-radius: 3px;
+  box-shadow: 0 0 8px #00f0ff;
+  transition: width 0.4s ease;
+}
+
+.hardware-progress-bar.warning {
+  background: linear-gradient(90deg, #ffb700 0%, #ff2a6d 100%);
+  box-shadow: 0 0 8px #ff2a6d;
+}
+
+/* Footer Telemetry Chips */
+.hardware-footer-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.hardware-tag {
+  font-size: 8.5px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
